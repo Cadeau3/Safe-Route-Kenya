@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SafeRoute Kenya — Python Backend Demo</title>
+<style>
+  body{font-family:system-ui;background:#f6f8fb;margin:20px}
+  .grid{display:grid;grid-template-columns:repeat(10,34px);gap:4px}
+  .cell{width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer}
+  .low{background:#d9f7d9}
+  .mid{background:#fff2b3}
+  .high{background:#ffc2c2}
+  .controls{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+  button{padding:8px 12px;border:0;border-radius:8px;background:#1565c0;color:#fff}
+</style>
+</head>
+
+<body>
+<h2>SafeRoute Kenya — Python Version</h2>
+
+<div class="controls">
+  <label>Type:
+    <select id="typeSel">
+      <option>pickpocket</option>
+      <option>harassment</option>
+      <option>poor_lighting</option>
+      <option>stray_dog</option>
+      <option>flood</option>
+      <option>pothole</option>
+      <option>accident</option>
+    </select>
+  </label>
+
+  <label>Severity:
+    <select id="sevSel">
+      <option value="1">1 (mild)</option>
+      <option value="2">2 (moderate)</option>
+      <option value="3">3 (severe)</option>
+    </select>
+  </label>
+
+  <button id="modeBtn">Tap grid to report</button>
+  <button id="refresh">Refresh Grid</button>
+  <button id="clear">Clear</button>
+</div>
+
+<div style="margin-top:14px;">
+  <div id="grid" class="grid"></div>
+</div>
+
+<div id="status" style="margin-top:14px;font-size:14px"></div>
+
+<script src="/static/main.js"></script>
+</body>
+</html>
